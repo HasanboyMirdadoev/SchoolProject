@@ -107,6 +107,40 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "SchoolProject.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "SchoolProject.Application.Contracts": "1.0.0",
+          "SchoolProject.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SchoolProject.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SchoolProject.Application.dll": {}
+        }
+      },
+      "SchoolProject.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/SchoolProject.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SchoolProject.Application.Contracts.dll": {}
+        }
+      },
+      "SchoolProject.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/SchoolProject.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SchoolProject.Domain.dll": {}
+        }
       }
     }
   },
@@ -460,11 +494,27 @@
         "swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "SchoolProject.Application/1.0.0": {
+      "type": "project",
+      "path": "../SchoolProject.Application/SchoolProject.Application.csproj",
+      "msbuildProject": "../SchoolProject.Application/SchoolProject.Application.csproj"
+    },
+    "SchoolProject.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../SchoolProject.Application.Contracts/SchoolProject.Application.Contracts.csproj",
+      "msbuildProject": "../SchoolProject.Application.Contracts/SchoolProject.Application.Contracts.csproj"
+    },
+    "SchoolProject.Domain/1.0.0": {
+      "type": "project",
+      "path": "../SchoolProject.Domain/SchoolProject.Domain.csproj",
+      "msbuildProject": "../SchoolProject.Domain/SchoolProject.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.7",
+      "SchoolProject.Application >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -501,7 +551,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Intern\\source\\repos\\SchoolProject\\SchoolProject\\SchoolProject.Application\\SchoolProject.Application.csproj": {
+              "projectPath": "C:\\Users\\Intern\\source\\repos\\SchoolProject\\SchoolProject\\SchoolProject.Application\\SchoolProject.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
